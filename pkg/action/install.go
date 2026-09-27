@@ -913,7 +913,7 @@ func (c *ChartPathOptions) LocateChart(name string, settings *cli.EnvSettings) (
 	}
 
 	dl := downloader.ChartDownloader{
-		Out:     os.Stdout,
+		Out:     os.Stderr,
 		Keyring: c.Keyring,
 		Getters: getter.All(settings),
 		Options: []getter.Option{
